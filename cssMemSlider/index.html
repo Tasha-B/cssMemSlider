@@ -11,32 +11,64 @@
 </head>
 <body>
     <header class="header">
-        <h1>cssMemSlider</h1>
+        <h1>cssMemeSlider</h1>
     </header>
-    <main class="main">
+    <div class="wrapper">
+        <input type="radio" id="img-1" class="control" name="control" checked>
+        <input type="radio" id="img-2" class="control" name="control">
+        <input type="radio" id="img-3" class="control" name="control">
+        <input type="radio" id="img-4" class="control" name="control">
+        <input type="radio" id="img-5" class="control" name="control">
         <div class="slider">
-            <img class="slider-item" src="./assets/1.gif" alt="first-slide">
-            </img>
-            <!-- <img class="slider-item" src="./assets/2.jpg" alt="">
-            </img>
-            <img class="slider-item" src="./assets/3.jpg" alt="">
-            </img>
-            <img class="slider-item" src="./assets/4.jpg" alt="">
-            </img>
-            <img class="slider-item" src="./assets/5.jpg" alt="">
-            </img>  -->
-        </div>
-        <div class="nav">
-            <p class="text">Hello, World!</p>
-            <div class="control">
-                <a class="control_btn" href="#" role = "button"></a>
-                <a class="control_btn" href="#" role = "button"></a>
-                <a class="control_btn" href="#" role = "button"></a>
-                <a class="control_btn" href="#" role = "button"></a>
+                <div class="slides img-1">
+                    <img class="slide" src="assets/img-1.gif" alt="meme"></img>
+                </div>
+                <div class="slides img-2">
+                    <img class="slide" src="assets/img-2.jpg" alt="meme"></img>
+                </div>
+                <div class="slides img-3">
+                    <img class="slide" src="assets/img-3.jpg" alt="meme"></img>
+                </div>
+                <div class="slides img-4">
+                    <img class="slide" src="assets/img-4.jpg" alt="meme"></img>
+                </div>
+                <div class="slides img-5">
+                    <img class="slide" src="assets/img-5.jpg" alt="meme"></img>
+                </div>
+        </div>  
+        <div class="slider-nav">
+            <div class="slider-text">
+                <div class="text text-1"><span>Чего завис? Листай дальше!</span></div> 
+                <div class="text text-2"><span>Почему я не узнал об этом раньше?</span></div> 
+                <div class="text text-3"><span>Когда с подругой поняли друг друга</span></div>
+                <div class="text text-4"><span>Список людей, которые пишут мне первыми</span></div>
+                <div class="text text-5"><span>Вискас есть? А если найду?</span></div> 
             </div>
+            <div class="controls">
+                    <label for="img-1">
+                        <div class="control-btn" id="label-1"></div>
+                    </label>
+               
+                    <label for="img-2">
+                        <div class="control-btn" id="label-2"></div>
+                    </label>
+             
+                    <label for="img-3">
+                        <div class="control-btn" id="label-3"></div>
+                    </label>
+              
+                    <label for="img-4">
+                        <div class="control-btn" id="label-4"></div>
+                    </label>
+             
+                    <label for="img-5">
+                        <div class="control-btn" id="label-5"></div>
+                    </label>
+            </div> 
         </div>
-    </main>
+    </div>
     <footer class="footer"></footer>
-    <script src="./script.js"></script>
 </body>
 </html>
+
+
