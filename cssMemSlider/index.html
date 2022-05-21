@@ -13,58 +13,56 @@
     <header class="header">
         <h1>cssMemeSlider</h1>
     </header>
-    <div class="wrapper">
-        <input type="radio" id="img-1" class="control" name="control" checked>
-        <input type="radio" id="img-2" class="control" name="control">
-        <input type="radio" id="img-3" class="control" name="control">
-        <input type="radio" id="img-4" class="control" name="control">
-        <input type="radio" id="img-5" class="control" name="control">
+    <div class="main">
+        <input type="radio" id="img-1" name="control" checked>
+        <input type="radio" id="img-2" name="control">
+        <input type="radio" id="img-3" name="control">
+        <input type="radio" id="img-4" name="control">
+        <input type="radio" id="img-5" name="control">
         <div class="slider">
-                <div class="slides img-1">
+            <div class="slides">
+                <div class="slide img-1">
                     <img class="slide" src="assets/img-1.gif" alt="meme"></img>
                 </div>
-                <div class="slides img-2">
+                <div class="slide img-2">
                     <img class="slide" src="assets/img-2.jpg" alt="meme"></img>
                 </div>
-                <div class="slides img-3">
+                <div class="slide img-3">
                     <img class="slide" src="assets/img-3.jpg" alt="meme"></img>
                 </div>
-                <div class="slides img-4">
+                <div class="slide img-4">
                     <img class="slide" src="assets/img-4.jpg" alt="meme"></img>
                 </div>
-                <div class="slides img-5">
+                <div class="slide img-5">
                     <img class="slide" src="assets/img-5.jpg" alt="meme"></img>
                 </div>
-        </div>  
-        <div class="slider-nav">
-            <div class="slider-text">
-                <div class="text text-1"><span>Чего завис? Листай дальше!</span></div> 
-                <div class="text text-2"><span>Почему я не узнал об этом раньше?</span></div> 
-                <div class="text text-3"><span>Когда с подругой поняли друг друга</span></div>
-                <div class="text text-4"><span>Список людей, которые пишут мне первыми</span></div>
-                <div class="text text-5"><span>Вискас есть? А если найду?</span></div> 
             </div>
-            <div class="controls">
-                    <label for="img-1">
-                        <div class="control-btn" id="label-1"></div>
-                    </label>
-               
-                    <label for="img-2">
-                        <div class="control-btn" id="label-2"></div>
-                    </label>
-             
-                    <label for="img-3">
-                        <div class="control-btn" id="label-3"></div>
-                    </label>
-              
-                    <label for="img-4">
-                        <div class="control-btn" id="label-4"></div>
-                    </label>
-             
-                    <label for="img-5">
-                        <div class="control-btn" id="label-5"></div>
-                    </label>
-            </div> 
+        </div>
+        <div class="slider-description">
+            <div class="slider-text">
+                <div class="text"><span>Чего завис? Листай дальше!</span></div> 
+                <div class="text"><span>Почему я не узнал об этом раньше?</span></div> 
+                <div class="text"><span>Когда с подругой поняли друг друга</span></div>
+                <div class="text"><span>Список людей, которые пишут мне первыми</span></div>
+                <div class="text"><span>Вискас есть? А если найду?</span></div> 
+            </div>
+        </div>
+        <div class="controls">
+            <label class="control" for="img-1">
+                <span></span>
+            </label>
+            <label class="control" for="img-2">
+                <span></span>
+            </label>
+            <label class="control" for="img-3">
+                <span></span>
+            </label>
+            <label class="control" for="img-4">
+                <span></span>
+            </label>
+            <label class="control" for="img-5">
+                <span></span>
+            </label>
         </div>
     </div>
     <footer class="footer"></footer>

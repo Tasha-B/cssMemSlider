@@ -31,133 +31,149 @@ h1 {
     color: rgb(24, 80, 145);
 }
 
-.wrapper {
+.main {
     max-width: 52.25rem;
+    width: 90%;
+    align-items: center;
     height: 35rem;
-    position: relative; 
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
+    padding: 0.94rem 1.06rem;
     background-color: rgb(136, 153, 172);
-    padding: 0.938rem 1.063rem;
 }
 
-.control {
+input {
     display: none;
 }
 
 .slider {
-    width: 50.125rem;
-    height: 84.9%;
-    padding: 0;
+    width: 100%;
+    height: 86%;
+    overflow: hidden;
     margin-bottom: 1.56rem;
-    margin-top: 0; 
 }
 
 .slides {
-    max-width: 100%;
-    width: inherit;
-    height: inherit;
-    opacity: 0;
-    position: absolute;
-    transition: all ease .7s;
+    width: 500%;
+    transition: .7s;
+    display: flex;
     align-items: center;
-    overflow: hidden;
-    z-index: 0;
-    transition: transform ease-in-out 0.5s opacity ease-in-out;
 }
 
-img {
+.slide {
     width: 100%;
-    /* display: block; */
     border: none;
     border-radius: 9px;
-
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.slider-nav {
-    display: flex;
-    justify-content: space-between;
+.slider-description {
+    width: 50%;
+    overflow: hidden;
 }
 
 .slider-text {
-    width: 42rem;
-    height: 1.25rem;
-    overflow: hidden;
-    position: relative;
-    z-index: 0;
+    width: 500%;
+    transition: .7s;
+    display: flex;
+    align-items: center;
 }
 
 .text {
-    width: inherit;
-    height: inherit;
-    opacity: 0;
-    position: absolute;
-    transition: all ease .7s;
-    align-items: center;
-    overflow: hidden;
-    z-index: 0;
-    transition: transform ease-in-out 0.5s opacity ease-in-out;
+    width: 100%;
 }
 
 .controls {
-    width: 4.625rem;
+    width: 50%;
     display: flex;
-    overflow: hidden;
-    margin-left: auto;
-    position: relative;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.control-btn {
-    width: 0.625rem;
-    height: 0.625rem;
-    margin-left: 0.375rem;
-    background-color: rgba(40, 61, 117, 0.5);
+.control span {
+    width: 0.9rem;
+    height: 0.9rem;
+    margin: 0.38rem;
+    background: rgb(40, 61, 117);
+    border: 2px solid rgb(151, 191, 250);
     border-radius: 50%;
-    display: inline-block;
-    position: relative;
-    transition: background-color 0.5s ease-in-out;
+    display: block;
+    transition: 0.5s;
     cursor: pointer;
 }
 
-#label-1 {
-    margin-left: 0;
-}
-
-.control-btn:hover{
-    background-color: rgb(118, 233, 194);
+.control:hover > span{
+    border: 2px solid rgb(107, 235, 194);
     -webkit-transform: scale(1.3);
     -ms-transform: scale(1.3);
     transform: scale(1.3);
-    opacity: 0.45;
 }
 
-#img-1:checked ~ .controls #label-1,
-#img-2:checked ~ .controls #label-2,
-#img-3:checked ~ .controls #label-3,
-#img-4:checked ~ .controls #label-4,
-#img-5:checked ~ .controls #label-5 {
-    background-color: rgb(107, 255, 255);
-    opacity: 1;
+.control:active > span {
+    border: 2px solid rgb(248, 134, 99);
 }
 
-#img-1:checked ~ .slider > .img-1,
-#img-2:checked ~ .slider > .img-2,
-#img-3:checked ~ .slider > .img-3,
-#img-4:checked ~ .slider > .img-4,
-#img-5:checked ~ .slider > .img-5 {
-    opacity: 1;
-    z-index: 1;
-    transform: scale(1);
+#img-1:checked ~ .controls > .control[for="img-1"] > span,
+#img-2:checked ~ .controls > .control[for="img-2"] > span,
+#img-3:checked ~ .controls > .control[for="img-3"] > span, 
+#img-4:checked ~ .controls > .control[for="img-4"] > span,
+#img-5:checked ~ .controls > .control[for="img-5"] > span {
+    background-color: transparent;
+    border-color: rgb(107, 235, 194);
 }
 
-#img-1:checked ~ .slider-nav > .slider-text > .text-1,
-#img-2:checked ~ .slider-nav > .slider-text > .text-2,
-#img-3:checked ~ .slider-nav > .slider-text > .text-3,
-#img-4:checked ~ .slider-nav > .slider-text > .text-4,
-#img-5:checked ~ .slider-nav > .slider-text > .text-5 {
-    opacity: 1;
+#img-1:checked ~ .controls > .control[for="img-1"]:hover > span, 
+#img-2:checked ~ .controls > .control[for="img-2"]:hover > span, 
+#img-3:checked ~ .controls > .control[for="img-3"]:hover > span, 
+#img-4:checked ~ .controls > .control[for="img-4"]:hover > span,
+#img-5:checked ~ .controls > .control[for="img-5"]:hover > span {
+    border-color: #a6da2d;
+}
+
+#img-1:checked ~ .slider > .slides {
+    transform: translateX(0);
+}
+
+#img-2:checked ~ .slider > .slides {
+    transform: translateX(-20%);
+}
+
+#img-3:checked ~ .slider > .slides {
+    transform: translateX(-40%);
+}
+
+#img-4:checked ~ .slider > .slides {
+    transform: translateX(-60%);
+}
+
+#img-5:checked ~ .slider > .slides {
+   transform: translateX(-80%);
+}
+
+#img-1:checked ~ .slider-description > .slider-text {
+    transform: translateX(0);
+}
+
+#img-2:checked ~ .slider-description > .slider-text {
+    transform: translateX(-20%);
+}
+
+#img-3:checked ~ .slider-description > .slider-text {
+    transform: translateX(-40%);
+}
+
+#img-4:checked ~ .slider-description > .slider-text {
+    transform: translateX(-60%);
+}
+
+#img-5:checked ~ .slider-description > .slider-text {
+    transform: translateX(-80%);
 }
   
-
 .footer {
     height: 6.25rem;
     display: flex;
@@ -166,29 +182,42 @@ img {
 }
 
 @media screen and (max-width: 767px) {
-    .wrapper {
-        flex-direction: column;
-    }
-
-    .slider {
-       
-        order: 1;
+    .main {
+        flex-direction: column-reverse;
+        padding: 0.94rem 1.06rem;
         margin: 0 auto;
     }
 
+    .slider {
+    }
     .slides {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
     }
-
-    .slider-nav {
-        order: 2;
+    .slide {
     }
-
+    .img-1 {
+    }
+    .img-2 {
+    }
+    .img-3 {
+    }
+    .img-4 {
+    }
+    .img-5 {
+    }
+    .slider-description {
+    }
+    .slider-text {
+    }
+    .text {
+    }
+    .controls {
+    }
     .control {
-        order: 2;
+    }
+    .control:last-child {
+        padding-right: 0.5rem;
+    }
+    .footer {
     }
 
-    
 }
