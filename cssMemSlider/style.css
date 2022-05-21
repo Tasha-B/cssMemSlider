@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0px;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    min-width: 20rem;
+    margin: 0;
+    padding: 0;
+    font-family:'Montserrat';
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgb(255, 255, 255);
+    background-color: rgb(212, 212, 212);
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.header {
+    height: 6.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: rgb(24, 80, 145);
+}
+
+.main {
+    max-width: 52.25rem;
+    width: 90%;
+    align-items: center;
+    height: 35rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0.94rem 1.06rem;
+    background-color: rgb(136, 153, 172);
+}
+
+input {
+    display: none;
+}
+
+.slider {
+    width: 100%;
+    height: 86%;
+    overflow: hidden;
+    margin-bottom: 1.56rem;
+}
+
+.slides {
+    width: 500%;
+    transition: .7s;
+    display: flex;
+    align-items: center;
+}
+
+.slide {
+    width: 100%;
+    border: none;
+    border-radius: 9px;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slider-description {
+    width: 50%;
+    overflow: hidden;
+}
+
+.slider-text {
+    width: 500%;
+    transition: .7s;
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    width: 100%;
+}
+
+.controls {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.control span {
+    width: 0.9rem;
+    height: 0.9rem;
+    margin: 0.38rem;
+    background: rgb(40, 61, 117);
+    border: 2px solid rgb(151, 191, 250);
+    border-radius: 50%;
+    display: block;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.control:hover > span{
+    border: 2px solid rgb(107, 235, 194);
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.control:active > span {
+    border: 2px solid rgb(248, 134, 99);
+}
+
+#img-1:checked ~ .controls > .control[for="img-1"] > span,
+#img-2:checked ~ .controls > .control[for="img-2"] > span,
+#img-3:checked ~ .controls > .control[for="img-3"] > span, 
+#img-4:checked ~ .controls > .control[for="img-4"] > span,
+#img-5:checked ~ .controls > .control[for="img-5"] > span {
+    background-color: transparent;
+    border-color: rgb(107, 235, 194);
+}
+
+#img-1:checked ~ .controls > .control[for="img-1"]:hover > span, 
+#img-2:checked ~ .controls > .control[for="img-2"]:hover > span, 
+#img-3:checked ~ .controls > .control[for="img-3"]:hover > span, 
+#img-4:checked ~ .controls > .control[for="img-4"]:hover > span,
+#img-5:checked ~ .controls > .control[for="img-5"]:hover > span {
+    border-color: #a6da2d;
+}
+
+#img-1:checked ~ .slider > .slides {
+    transform: translateX(0);
+}
+
+#img-2:checked ~ .slider > .slides {
+    transform: translateX(-20%);
+}
+
+#img-3:checked ~ .slider > .slides {
+    transform: translateX(-40%);
+}
+
+#img-4:checked ~ .slider > .slides {
+    transform: translateX(-60%);
+}
+
+#img-5:checked ~ .slider > .slides {
+   transform: translateX(-80%);
+}
+
+#img-1:checked ~ .slider-description > .slider-text {
+    transform: translateX(0);
+}
+
+#img-2:checked ~ .slider-description > .slider-text {
+    transform: translateX(-20%);
+}
+
+#img-3:checked ~ .slider-description > .slider-text {
+    transform: translateX(-40%);
+}
+
+#img-4:checked ~ .slider-description > .slider-text {
+    transform: translateX(-60%);
+}
+
+#img-5:checked ~ .slider-description > .slider-text {
+    transform: translateX(-80%);
+}
+  
+.footer {
+    height: 6.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+    .main {
+        flex-direction: column-reverse;
+        padding: 0.94rem 1.06rem;
+        margin: 0 auto;
+    }
+
+    .slider {
+    }
+    .slides {
+    }
+    .slide {
+    }
+    .img-1 {
+    }
+    .img-2 {
+    }
+    .img-3 {
+    }
+    .img-4 {
+    }
+    .img-5 {
+    }
+    .slider-description {
+    }
+    .slider-text {
+    }
+    .text {
+    }
+    .controls {
+    }
+    .control {
+    }
+    .control:last-child {
+        padding-right: 0.5rem;
+    }
+    .footer {
+    }
+
+}
